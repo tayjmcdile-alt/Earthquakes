@@ -1,6 +1,6 @@
 # Earthquakes
 
-Lead: epeguero  
+Lead: epeguero  Emilio Peguero
 Designer: cwhite29  
 SWE: tmcdile  
 Tester: dnichol5  
