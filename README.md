@@ -1,8 +1,11 @@
 # Earthquakes
 
 Lead: epeguero  Emilio Peguero
+
 Designer: cwhite29  
+
 SWE: tmcdile  
+
 Tester: dnichol5  
 
 Prioritized Project Ideas:
