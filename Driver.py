@@ -36,14 +36,17 @@ def login():
 
     if prefix == "900":
         #This is where the student files would go 
+        #Make sure to read Trello
         print(f"Welcome Student!")
 
     elif prefix == "700":
         #This is where the Professor files would go 
+        #Make sure to read Trello
         print(f"Welcome Professor!")
 
     elif prefix == "800":
         #This is where the Admin files would go 
+        #Make sure to read Trello
         print(f"Welcome Admin!")
 
     else:
