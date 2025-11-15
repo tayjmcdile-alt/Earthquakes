@@ -1,0 +1,20 @@
+# Ignore compiled Java files
+*.class
+
+# Ignore VS Code folders
+.vscode/
+.history/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache (if any Python files are in your project)
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.bak
