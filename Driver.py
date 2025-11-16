@@ -38,9 +38,13 @@ def login():
     prefix = user_id[:3]
 
     if prefix == "900":
-        #This is where the student files would go 
-        #Make sure to read Trello
-        print(f"Welcome Student!")
+        student = load_student(name, user_id)
+
+        if student is None:
+            print("Invalid name or ID — student not found.")
+            return
+
+        print(f"Welcome {student.full_name}!\n")
 
     elif prefix == "700":
         #This is where the Professor files would go 
