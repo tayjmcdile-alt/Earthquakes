@@ -11,7 +11,7 @@ class Course:
         else:
             while self.CRN in Course.crns_dict.keys():
                 CRN = random.randint(10000, 99999)
-            Course.crns_dict[self.CRN] = Course(course_name, time, class_list)
+            Course.crns_dict[self.CRN] = self
         self.time = time
         self.class_list = class_list
 
@@ -46,14 +46,14 @@ class Course:
         self.course_name = new_name
     
     #Scheduling Functions
-    def add_course_on_student_schedule(self, schedule_list, student_name, course_object):
+    def add_course_on_student_schedule(self, schedule_list, student_name):
         if student_name in self.class_list:
-            schedule_list.append(course_object)
+            schedule_list.append(self)
         else:
             print(f"Student {student_name} is not enrolled in this course.")
     
-    def remove_course_from_student_schedule(self, student_name):
+    def remove_course_from_student_schedule(self, student_name, schedule_list):
         if student_name in self.class_list:
-            schedule_list.append(course_object)
+            schedule_list.remove(self)
         else:
             print(f"Student {student_name} is not enrolled in this course.")
