@@ -2,15 +2,15 @@ import random
 
 class Course: 
     def __init__(self, course_name, time, class_list):
-        crns_list = []
+        crns_dict = {}
         self.course_name = course_name
         CRN = random.randint(10000, 99999)
-        if CRN not in crns_list:
-            crns_list.append(CRN)
+        if CRN not in crns_dict:
+            crns_dict[CRN] = Course(course_name, time, class_list)
         else:
-            while CRN in crns_list:
+            while CRN in crns_dict:
                 CRN = random.randint(10000, 99999)
-            crns_list.append(CRN)
+            crns_dict[CRN] = Course(course_name, time, class_list)
         self.CRN = CRN
         self.time = time
         self.class_list = class_list
@@ -23,6 +23,11 @@ class Course:
         for student in self.class_list:
             print(f"- {student}")
     
-    def create_course(self, course_name, time, class_list):
-        new_course = Course(course_name, time, class_list)
-        return new_course
+    def access_course(self, CRN, crns_dict):
+        if CRN in crns_dict:
+            return crns_dict[CRN]
+        else:
+            return "Not a valid CRN."
+    
+        z
+    
