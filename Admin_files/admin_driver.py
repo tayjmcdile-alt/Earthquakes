@@ -1,10 +1,12 @@
 import sys
 from pathlib import Path
+from Admin_files.Course import Course
 
 root_folder = Path(__file__).parent.parent
 sys.path.insert(0, str(root_folder))
 
 from Functions import clear_screen
+from Functions import admin_input_course
 
 def admin_driver(admin):
     while True:
@@ -19,6 +21,9 @@ def admin_driver(admin):
         if choice == "1":
             clear_screen()
             print("Creating course")
+            course1 = admin_input_course()
+            course1.print_course_details()
+
 
         elif choice == "2":
             clear_screen()

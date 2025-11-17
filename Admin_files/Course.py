@@ -17,7 +17,7 @@ class Course:
 
     def print_course_details(self):
         print(f"Course Name: {self.course_name}")
-        print(f"Course ID: {self.course_id}")
+        print(f"Course CRN: {self.CRN}")
         print(f"Time: {self.time}")
         print("Class List:")
         for student in self.class_list:
