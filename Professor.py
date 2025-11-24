@@ -1,6 +1,6 @@
 class Professor:
-    def __innit__(self, professor_id, full_name, department, assigned_courses=None):
-        self.professor_id - professor_id
+    def __init__(self, professor_id, full_name, department, assigned_courses=None):
+        self.professor_id = professor_id
         self.full_name = full_name
         self.department = department
         self.assigned_courses = assigned_courses if assigned_courses is not None else []
@@ -40,7 +40,7 @@ class Professor:
 
         courses_str = ';'.join(self.assigned_courses) if self.assigned_courses else ''
         
-        parts = ["PROFESSOR", self.professor_num, self.full_name, courses_str]
+        parts = ["PROFESSOR", self.professor_id, self.full_name, courses_str]
         record = ",".join(escape(p) for p in parts)
 
         with open(database, "a", encoding="utf-8") as f:
